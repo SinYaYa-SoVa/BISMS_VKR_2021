@@ -1,0 +1,35 @@
+{% extends "base_main.html" %}
+
+{% load static %}
+
+{% block title %}<title>BISMS - Инциденты</title>{% endblock %}
+
+{% block content %}
+
+    <table>
+        <tr><th>Id</th><th>FIO</th><th>Dep</th><th>Pos</th><th>Rol</th><th>Cont</th></tr>
+        {% for num in context %}
+        <tr><td>{{ num.id }}</td><td>{{ num.FIO }}</td><td>{{ num.Department }}</td><td>{{ num.Position }}</td><td>{{ num.Role }}</td><td>{{ num.Contacts }}</td></tr>
+        {% endfor %}
+    </table>
+
+    <table id="exam">
+  {% for object in emp %}
+  <tr>
+    <td>{{ object }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{#{% for employee in employees %}#}
+{#    <tr class='success'>#}
+{#        <td>{{ employee.id }}</td>#}
+{#        <td>{{ employee.FIO }}</td>#}
+{#        <td>{{ employee.Department }}</td>#}
+{#        <td>{{ employee.Position }}</td>#}
+{#        <td>{{ employee.Role }}</td>#}
+{#        <td>{{ employee.Contacts }}</td>#}
+{#    </tr>#}
+{#{% endfor %}#}
+{% endblock %}
+

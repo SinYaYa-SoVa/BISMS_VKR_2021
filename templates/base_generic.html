@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% block title %}<title>BISMS</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Добавление дополнительного статического CSS файла -->
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="shortcut icon" href="{% static '/images/favicon.jpg' %}">
+
+</head>
+
+<body>
+
+{% block login %} {% endblock %}
+
+
+</body>
+</html>
